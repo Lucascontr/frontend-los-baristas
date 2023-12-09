@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Los Baristas</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand custom-brand" href="#">Los Baristas Tienda Online</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Correo electrónico" id="email" name="email" required>
+                        <input class="form-control mr-sm-2" type="password" placeholder="Contraseña" id="password" name="password" required>
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="button" onclick="login()">Ingresar</button>
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="button" onclick="register()">Registrarse</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card-deck">
+            <div class="card">
+                <img src="../frontend-Los-Baristas-master/static/img/img_3_latte.jpg" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Café Latte</h5>
+                    <p class="card-text">Café re rico. Precio: $800</p>
+                    <button class="btn btn-light" onclick="addToCart('Producto 1', 20)">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../frontend-Los-Baristas-master/static/img/img_4_capuccino.jpg" class="card-img-top" alt="Producto 2">
+                <div class="card-body">
+                    <h5 class="card-title">Capuccino</h5>
+                    <p class="card-text">Descripción. Precio: $30</p>
+                    <button class="btn btn-light" onclick="addToCart('Producto 2', 30)">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../frontend-Los-Baristas-master/static/img/img_22_chocolatada.jpg" class="card-img-top" alt="Producto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Chocolatada</h5>
+                    <p class="card-text">Descripción. Precio: $25</p>
+                    <button class="btn btn-light" onclick="addToCart('Producto 3', 25)">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../frontend-Los-Baristas-master/static/img/img_23_cafechico.jpg"card-img-top" alt="Producto 4">
+                <div class="card-body">
+                    <h5 class="card-title">Café chico</h5>
+                    <p class="card-text">Descripción. Precio: $18</p>
+                    <button class="btn btn-light" onclick="addToCart('Producto 4', 18)">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck mt-4">
+            <div class="card">
+                <img src="../frontend-Los-Baristas-master/static/img/medialuna.PNG" class="card-img-top" alt="Producto 5">
+                <div class="card-body">
+                    <h5 class="card-title">Medialuna</h5>
+                    <p class="card-text">Descripción. Precio: $22</p>
+                    <button class="btn btn-light" onclick="addToCart('Producto 5', 22)">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../frontend-Los-Baristas-master/static/img/Frapuccino.PNG" class="card-img-top" alt="Producto 6">
+                <div class="card-body">
+                    <h5 class="card-title">Frapuccino</h5>
+                    <p class="card-text">Descripción. Precio: $15</p>
+                    <button class="btn btn-light" onclick="addToCart('Producto 6', 15)">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../frontend-Los-Baristas-master/static/img/cafe_en_granos.PNG" class="card-img-top" alt="Producto 7">
+                <div class="card-body">
+                    <h5 class="card-title">Café en granos Brasil</h5>
+                    <p class="card-text">Descripción. Precio: $28</p>
+                    <button class="btn btn-light" onclick="addToCart('Producto 7', 28)">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../frontend-Los-Baristas-master/static/img/cafe_granos_jacobs.PNG" class="card-img-top" alt="Producto 8">
+                <div class="card-body">
+                    <h5 class="card-title">Café en granos Jacobs</h5>
+                    <p class="card-text">Descripción. Precio: $24</p>
+                    <button class="btn btn-light" onclick="addToCart('Producto 8', 24)">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h2>Carrito de compras</h2>
+            <ul id="cartItems" class="list-group">
+                <!-- Aquí se mostrarán los elementos del carrito -->
+            </ul>
+        
+            <div class="mt-3">
+                <h4>Total: $<span id="total">0.00</span></h4>
+            </div>
+        </div>
+    </div>
+   
+
+ <footer class="bg-dark text-white text-center py-2 mt-4">
+    <div class="caja">
+         
+         <h2>Encontranos en nuestras redes</h2>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="style.css">
+      
+           <section class="buttons">
+             <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook"></a>
+             <a href="https://twitter.com/?lang=es" class="fa fa-twitter"></a>
+             <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+             <a href="https://ar.linkedin.com/" class="fa fa-linkedin"></a>
+           </section>
+    
+         
+    </div>
+        <p>&copy; 2023 Tienda Online. Todos los derechos reservados.</p>
+</footer>
+
+    <!-- Incluye Vue.js v3 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/crud.js"></script>     <!-- después de Vue.js -->
+    <script src="js/userpwd.js"></script>
+
+</body>

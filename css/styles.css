@@ -1,0 +1,115 @@
+/* Estilo del cuerpo de la página */
+body {
+    
+    background-color: #F2ECBE;
+    color: #333; /* Cambié el color del texto a un tono más oscuro */
+}
+
+/* Estilo de la barra de navegación */
+nav {
+    background-color: #C08261; /* Color del navbar ajustado */
+}
+
+/* Estilo personalizado para navbar-brand */
+.custom-brand {
+    color: black !important;
+}
+
+/* Cambia "tu-color-deseado" al color que prefieras, por ejemplo, "red" o "#FF0000" */
+
+
+/* Estilo de los botones y texto en la barra de navegación */
+.navbar-toggler-icon,
+.navbar-toggler,
+.navbar-brand,
+.navbar-nav li a {
+    color: #F2ECBE;
+}
+
+/* Estilo de las tarjetas de productos */
+.card {
+    background-color: #E2C799;
+}
+
+/* Estilo del pie de página */
+.footer {
+    background-color: #9A3B3B;
+    color: #F2ECBE;
+}
+
+/* Estilo de los botones y formulario */
+.btn-primary {
+    background-color: #9A3B3B; /* Cambié el color del botón principal a uno más oscuro */
+    color: #F2ECBE;
+}
+
+.btn-outline-primary {
+    border-color: #9A3B3B;
+    color: #9A3B3B;
+}
+
+.form-control {
+    border-color: #9A3B3B;
+}
+
+/* Estilo de la lista del carrito y total */
+.list-group {
+    background-color: #F2ECBE; /* Cambié el fondo de la lista del carrito a un tono más claro */
+}
+
+/* Estilo del texto del total */
+#total {
+    color: #9A3B3B; /* Cambié el color del texto del total a uno más oscuro */
+}
+.caja {
+    flex: 1; /* Las cajas ocupan el mismo espacio horizontalmente */
+    padding: 10px; /* Espacio interno para dar margen al contenido de las cajas */
+   /* border: 1px solid #666; *//* Borde alrededor de las cajas (puedes personalizarlo) */
+    text-align: center; /* Centra el texto horizontalmente en cada caja */
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente en cada caja */
+  }
+  .caja {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  
+  .caja {
+    background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgb(243, 146, 167) 0%, rgb(201, 139, 89) 90% );
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buttons {
+    min-width: 700px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #314652;
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+  }
+  
+  .buttons a:hover {
+    transform: scale(1.2);
+
+  }
+    
+    
+  
+  
